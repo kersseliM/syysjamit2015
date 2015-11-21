@@ -92,7 +92,6 @@ public class Grapper : MonoBehaviour
     Rigidbody playerRigidBody;
     bool isGrapped;
     Transform hand;
-    float yFromHand = 1;
     HingeJoint hj;
     void Grab(Rigidbody rb)
     {
