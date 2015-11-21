@@ -1,3 +1,5 @@
+-----------------------------------------------------------------------------------
+
 CODE FUNCTIONS
 
 - Drag and drop
@@ -8,6 +10,8 @@ CODE FUNCTIONS
 - win and loose condition (when sound gets too high, it wakes up NPC, 
 but if no NPC is being dragged or burning, then the NPC falls asleep 
 after a short while provided it's quiet enough)
+
+-----------------------------------------------------------------------------------
 
 ART
 
@@ -38,28 +42,84 @@ props (stuff you can tip over)
 - tuoli
 - table
 - ect
-- christmas tree
+- christmas ornaments (balls and a star, to be placed on small tree)
+- Sack
+- Barrel
+- log (section of tree)
+- treetop (tapering end to log)
+- branch (also a twig, just scale. Arrange on top of tree for a crown)
 
+- darkness encroaching HUD effect (for freezing to death)
+
+-----------------------------------------------------------------------------------
+
+AUDIO (priority order)
+- Ambient (wind, snowfall)
+- Sounds of freezing voice (shivering/tremoring breath)
+x Burn medium (freebie)
+- Burn harder
+- Burn fainter
+- Gunshot
+- Burning voice
+- Death by fire voice
+- Picking up something with gloves
+- Throwing something with glvoes
+- Metal collission
+- Cloth collision
+- Wood collission
+- Hyperventilation voice
+- Player collapses voice (part of all deaths)
+- Dark, slow ambient music
+
+=================================================================================
 
 
 INTRO
 *sound of cold wind and burning*
 *protagonist shivers from the cold*
 *sound of someone walking over poking your sleeping bag*
-"It's your turn to watch the fire. Don't let it run out of fuel, or we'll all freeze to death. Keep the fire alive until sunrise, no matter what... No matter what."
+"Hey, wake up. It's your turn to watch the fire. Don't let it run out of fuel, or we'll all freeze to death. Keep the fire alive until sunrise, no matter what... No matter what."
 *sound of someone getting into sleeping bag*
 *your eyes open and the camera moves up to the sounds of you getting out of your sleeping bag*
 *you stand upright and camera is moved to the fire.*
 *you gain control*
 
+-----------------------------------------------------------------------------------
+
 GAMEPLAY
 
-You drag fuel to the fire to keep it alive. If the fire dies, you die (from freezing.) You have to keep the fire going until morning, and time is indicated by the sky. When the sun appears from behind the mountains, you've survived and you clear the game. Anything that could possibly burn, will... Even your friends... (Keep quiet though. Noise is caused by collision with objects, and friends. If your friends wake up, they'll only fall asleep if you're quiet for long enough. If they witness something bad when awake, you loose...) Fire state is indicated by the light from the stove, when fire gets low the light starts to fade and player starts to hyperventilate.
+You drag fuel to the fire to keep it alive. If the fire dies, you die (from freezing.) 
+You have to keep the fire going until morning, and time is indicated by the sky. 
+When the sun appears from behind the mountains, you've survived and you clear the game. 
+Anything that could possibly burn, will... Even your friends... (Keep quiet though. 
+Noise is caused by collision with objects, and friends. If your friends wake up, they'll 
+only fall asleep if you're quiet for long enough. If they witness something bad when awake, you loose...)
+ Fire state is indicated by the light from the stove, when fire gets low the light starts to fade and player starts to hyperventilate.
+
+-----------------------------------------------------------------------------------
 
 OUTRO
--Survive - You look up to the sky as the sun rises, it blinds you and the camera fades to white... If anyone is still alive, someone says "...May the gods forgive us..."
+- Survive - You look up to the sky as the sun rises, it blinds you and the camera fades to white...
+ If anyone is still alive, someone (different voice than intro) says "Oh no... May the gods forgive us..."
+- Freeze to death - The fire dies and all goes dark. You hear your hyperventilation stop, and with a final shudder going quiet,
+ you die. The game loops to intro.
+- Get detected - The witness cries out bloody murder, and with the sound of a gun you die.
+ Fade to black, game loops to intro.
 
-- Freeze to death - The fire dies and all goes dark. You hear your hyperventilation stop, and with a final shudder going quiet, you die. The game loops to intro.
+===================================================================================
 
-- Get detected - The witness cries out bloody murder, and with the sound of a gun you die. Fade to black, game loops to intro.
+NEW IDEAS (not yet accepted)
+
+- The game is a scavenging game for most of the time. (There should be clearly taunting bits of fuel around first)
+- Sound has to be kept down at all times. Wake the NPCs too many times and they'll shoot you, worried your noise will attract The Beast.
+- There are animals (like a wolf) that you can find in the nearby forest and drag over to the fire to burn.
+- You can pick up everything, but only burn some things (burnables and non-burnables)
+- Big objects obviously provide more fuel.
+- Game lasts 5 mins for testing purpouses (double if seems like people can play)
+- All objects in the fire burn and are slowly consumed, but there's a maximum value for the fire, so it's uneconomical to use too much fuel at once as it goes to waste
+- Player can catch fire. Player is a burnable object too, and can sacrifice self as fuel for the fire. If he does so, and the fire is sustained until sunrise, the game is won.
+- Fire spreads (anything close enough to a burning object catches fire too) and can cause disaster
+- Big objects are compromised of "tiles" so individual tiles can be taken away. (If possible, some sort of collapsing mechanic here, so things only fall appart when their supporting structure is removed (hierarchy? If a higher piece that isn't a base piece finds no lower rank piece attached to it, it becomes dynamic and falls))
+(- Player health indicated by red pulsing edges of vision, round-ish gradient, and heartbeat sounds)
+- Player warmth indicated by encroaching darkness HUD effect, colors fading to black and white, and shivering/tremoring breath sounds
 
