@@ -95,10 +95,14 @@ public class Grapper : MonoBehaviour
     HingeJoint hj;
     void Grab(Rigidbody rb)
     {
+        rb.isKinematic = false;
         isGrapped = true;
         rb.MovePosition(hand.transform.position);
         rb.velocity = Vector3.zero;
         hj.connectedBody = rb;
+
+        rb.GetComponent<Item>().checkIfKaverit();
+
     }
     void InitializeHand()
     {

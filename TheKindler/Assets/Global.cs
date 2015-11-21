@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Global : MonoBehaviour
-
 {
   public  GameObject Fire;
 
@@ -14,6 +14,10 @@ public class Global : MonoBehaviour
     public float temperature;
     public Slider slider;
     public Material burnedTexture;
+    public RigidbodyFirstPersonController Mover;
+
+    public float MassOfThItem = 1;
+
 
     void Awake()
     {
@@ -22,9 +26,13 @@ public class Global : MonoBehaviour
         Fire = Resources.Load("FireComplex 1") as GameObject;
     }
 
+
+        
+
     void Update()
     {
-
+   //     Mover.movementSettings.CurrentTargetSpeed *= MassOfThItem;//
+    //    Mover.movementSettings.CurrentTargetSpeed = 20;
         if (Input.GetMouseButtonDown(0))
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -46,6 +54,8 @@ public class Global : MonoBehaviour
             temperature = 40;
 
         slider.value = Mathf.Lerp(slider.value, temperature, Time.deltaTime * 5);
+        print(temperature / 40);
+
     }
 
 

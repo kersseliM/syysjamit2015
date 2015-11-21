@@ -10,6 +10,13 @@ public class Item : MonoBehaviour
     public bool IsBurning;
     Vector3 startScale;
     Renderer myMat;
+
+    public bool OnkoKaverit;
+    public void checkIfKaverit()
+    {
+        if (OnkoKaverit == true)
+            EnableKaverit();
+    }
     void Start()
     {
         startScale = transform.localScale;
@@ -50,7 +57,21 @@ public class Item : MonoBehaviour
             }
         }
     }
+
+
+    void OnCollisionEnter(Collision col)
+    {
+     
+    }
     public LayerMask burningMask;
 
+
+    void EnableKaverit()
+    {
+        foreach(Transform t in transform.parent  )
+        {
+            t.GetComponent<Rigidbody>().isKinematic = false;
+        }
+    }
 
 }
