@@ -9,6 +9,7 @@ public class Global : MonoBehaviour
     public List<ParticleSystemMultiplier> fires = new List<ParticleSystemMultiplier>();
     public float temperature;
     public Slider slider;
+    public Material burnedTexture;
 
     void Awake()
     {

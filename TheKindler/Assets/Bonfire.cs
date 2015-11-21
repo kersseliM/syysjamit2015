@@ -44,9 +44,7 @@ public class Bonfire : MonoBehaviour {
         g.GetComponent<ParticleSystemDestroyer>().duration = item.GetComponent<Item>().duration;
         g.GetComponent<AudioSource>().maxDistance = 1 + multiplier;
         g.GetComponent<AudioSource>().volume = 0.5f + (multiplier/10);
-
-      
-
+        item.GetComponent<Item>().StartLerp() ;
         item.gameObject.layer = burningMask;
         g.transform.parent = item.transform;
         item.GetComponent<Rigidbody>().velocity = Vector3.zero;
