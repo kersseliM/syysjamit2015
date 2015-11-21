@@ -4,11 +4,8 @@ using System.Collections;
 public class Fire : MonoBehaviour
 {
 
-    GameObject bonfire;
-    // Use this for initialization
     void Start()
     {
-        bonfire = transform.FindChild("BonFire").gameObject;
     }
 
     // Update is called once per frame
@@ -31,7 +28,5 @@ public class Fire : MonoBehaviour
     void OnDisable()
     {
         Global.Instanse.fires.Remove(GetComponent<ParticleSystemMultiplier>());
-        bonfire.SetActive(false);
     }
-
 }
