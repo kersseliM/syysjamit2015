@@ -33,6 +33,7 @@ public class Item : MonoBehaviour
 
             if (percentage >= 1)
             {
+                if(myMat != null)
                 myMat.material = Global.Instanse.burnedTexture;
             }
         }

@@ -120,6 +120,7 @@ public class Global : MonoBehaviour
         FIREISOUT = false;
         hyperventio.Stop();
 
+
     }
   public  void MakeFire(GameObject item)
     {
