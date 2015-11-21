@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Global : MonoBehaviour
 {
     public static Global Instanse;
     public List<ParticleSystemMultiplier> fires = new List<ParticleSystemMultiplier>();
     public float temperature;
+    public Slider slider;
 
     void Awake()
     {
@@ -16,12 +18,22 @@ public class Global : MonoBehaviour
     void Update()
     {
 
-        float temp=0;
-        foreach(ParticleSystemMultiplier psm in fires)
+
+        if (Input.GetMouseButtonDown(0))
         {
-            temp += psm.multiplier; 
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+
+        float temp = 0;
+        foreach (ParticleSystemMultiplier psm in fires)
+        {
+            temp += psm.multiplier;
         }
         temperature = temp;
-        print(temperature);
+        slider.value = Mathf.Lerp(slider.value, temperature, Time.deltaTime * 5);
     }
 }

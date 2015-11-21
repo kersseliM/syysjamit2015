@@ -18,9 +18,15 @@ public class Fire : MonoBehaviour
 
     void OnEnable()
     {
-        Global.Instanse.fires.Add(GetComponent<ParticleSystemMultiplier>());
+        Invoke("e", 2);
+       
     }
 
+    void e ()
+    {
+        Global.Instanse.fires.Add(GetComponent<ParticleSystemMultiplier>());
+
+    }
     void OnDisable()
     {
         Global.Instanse.fires.Remove(GetComponent<ParticleSystemMultiplier>());

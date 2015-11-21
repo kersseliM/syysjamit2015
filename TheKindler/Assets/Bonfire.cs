@@ -8,7 +8,7 @@ public class Bonfire : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-
+  
         Fire = Resources.Load("FireComplex 1") as GameObject;
 	}
 	
@@ -16,6 +16,12 @@ public class Bonfire : MonoBehaviour {
 	void Update () 
     {
 	
+
+
+        
+
+
+        
 	}
 
 

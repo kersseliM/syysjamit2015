@@ -118,9 +118,6 @@ public class Grapper : MonoBehaviour
         if (velocity < 1)
             velocity = 1;
 
-
-        print(velocity);
-
         temp.AddForce((hand.forward + TossForce) * tossMultiplier * velocity, ForceMode.Impulse);
         isGrapped = false;
     }
