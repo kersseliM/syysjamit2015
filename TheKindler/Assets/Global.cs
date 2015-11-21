@@ -21,7 +21,9 @@ public class Global : MonoBehaviour
 
    public bool FIREISOUT;
     public AudioSource hyperventio;
-
+    public float TimeToWin =  5000;
+    float timer;
+    bool voititPelin;
 
     void Awake()
     {
@@ -35,8 +37,23 @@ public class Global : MonoBehaviour
 
     void Update()
     {
+
+        if (voititPelin == true)
+            return;
+
+        timer += Time.deltaTime;
+
+
+        if(timer > TimeToWin)
+        {
+            print("VoititPelin");
+            voititPelin = true;
+
+        }
    //     Mover.movementSettings.CurrentTargetSpeed *= MassOfThItem;//
     //    Mover.movementSettings.CurrentTargetSpeed = 20;
+
+        
         if (Input.GetMouseButtonDown(0))
         {
             Cursor.lockState = CursorLockMode.Locked;
