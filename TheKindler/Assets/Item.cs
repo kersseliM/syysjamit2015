@@ -48,11 +48,9 @@ public class Item : MonoBehaviour
     {
         if (IsBurning)
         {
-            print("isburruerw");
             if (col.gameObject.tag == "Item")
             {
-                print("dasasd");
-             Global.Instanse.MakeFire(col.gameObject);
+                Global.Instanse.MakeFire(col.gameObject);
                 col.gameObject.tag = "Used";
             }
         }
@@ -61,14 +59,14 @@ public class Item : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-     
+
     }
     public LayerMask burningMask;
 
 
     void EnableKaverit()
     {
-        foreach(Transform t in transform.parent  )
+        foreach (Transform t in transform.parent)
         {
             t.GetComponent<Rigidbody>().isKinematic = false;
         }

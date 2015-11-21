@@ -15,8 +15,12 @@ public class Global : MonoBehaviour
     public Slider slider;
     public Material burnedTexture;
     public RigidbodyFirstPersonController Mover;
-
+    public AudioSource musicBox;
     public float MassOfThItem = 1;
+    public float TimeToFreezeDeaht=60;
+
+   public bool FIREISOUT;
+    public AudioSource hyperventio;
 
 
     void Awake()
@@ -55,9 +59,68 @@ public class Global : MonoBehaviour
 
         slider.value = Mathf.Lerp(slider.value, temperature, Time.deltaTime * 5);
 
+
+        float targetPitch = 1;
+
+
+
+        if (temperature >= 39)
+        {
+           targetPitch = 2.5f;
+        }
+
+        if (temperature > 1 && temperature < 25)
+            musicBox.pitch = 1;
+
+        if (temperature >= 25)
+        {
+           targetPitch = 1.6f;
+        }
+
+        if(temperature <= 0)
+        {
+           targetPitch = 0.3f;
+        }
+
+        musicBox.pitch = Mathf.Lerp(musicBox.pitch, targetPitch, Time.deltaTime * 5);
+
+
+        if(temperature <=0)
+        {
+            if (!FIREISOUT)
+                FIREISOUTAAA();
+
+            TimeToFreezeDeaht = TimeToFreezeDeaht - Time.deltaTime;
+
+            if(TimeToFreezeDeaht <= 0) 
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
+        }
+        else
+        {
+            if(FIREISOUT)
+            {
+                TaasWarm();
+
+            }
+
+        }
+
     }
 
+    void FIREISOUTAAA()
+    {
+        FIREISOUT = true;
+        hyperventio.Play();
+    }
 
+    void TaasWarm()
+    {
+        FIREISOUT = false;
+        hyperventio.Stop();
+
+    }
   public  void MakeFire(GameObject item)
     {
         Vector3 pos = item.transform.position;
