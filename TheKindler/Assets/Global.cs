@@ -54,7 +54,6 @@ public class Global : MonoBehaviour
             temperature = 40;
 
         slider.value = Mathf.Lerp(slider.value, temperature, Time.deltaTime * 5);
-        print(temperature / 40);
 
     }
 
