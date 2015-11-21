@@ -1,0 +1,65 @@
+CODE FUNCTIONS
+
+- Drag and drop
+- Basic movement
+- Sound dynamics (sneak)
+- dragged mass affects movement
+- ragdoll physics
+- win and loose condition (when sound gets too high, it wakes up NPC, 
+but if no NPC is being dragged or burning, then the NPC falls asleep 
+after a short while provided it's quiet enough)
+
+ART
+
+Objectives
+- Oven
+- NPC (just someone in a sleeping bag)
+- NPC rig
+- NPC skin
+- vedklabbe/puuhalki
+- fire particles, maybe
+
+background/enviro
+- tree
+- rock
+- terrain texture (just some snow grit)
+- sleeping bag (NPCs sleep on top because fuck you we don't have time to sfjskdfdhgjklhegl)
+- eventually some other shit
+- lump of snow
+
+props (stuff you can tip over)
+- aluminium can
+- coffee pan
+- glass bottle
+- coffee cups
+- kattila
+- lautanen
+- lusikka
+- tuoli
+- table
+- ect
+- christmas tree
+
+
+
+INTRO
+*sound of cold wind and burning*
+*protagonist shivers from the cold*
+*sound of someone walking over poking your sleeping bag*
+"It's your turn to watch the fire. Don't let it run out of fuel, or we'll all freeze to death. Keep the fire alive until sunrise, no matter what... No matter what."
+*sound of someone getting into sleeping bag*
+*your eyes open and the camera moves up to the sounds of you getting out of your sleeping bag*
+*you stand upright and camera is moved to the fire.*
+*you gain control*
+
+GAMEPLAY
+
+You drag fuel to the fire to keep it alive. If the fire dies, you die (from freezing.) You have to keep the fire going until morning, and time is indicated by the sky. When the sun appears from behind the mountains, you've survived and you clear the game. Anything that could possibly burn, will... Even your friends... (Keep quiet though. Noise is caused by collision with objects, and friends. If your friends wake up, they'll only fall asleep if you're quiet for long enough. If they witness something bad when awake, you loose...) Fire state is indicated by the light from the stove, when fire gets low the light starts to fade and player starts to hyperventilate.
+
+OUTRO
+-Survive - You look up to the sky as the sun rises, it blinds you and the camera fades to white... If anyone is still alive, someone says "...May the gods forgive us..."
+
+- Freeze to death - The fire dies and all goes dark. You hear your hyperventilation stop, and with a final shudder going quiet, you die. The game loops to intro.
+
+- Get detected - The witness cries out bloody murder, and with the sound of a gun you die. Fade to black, game loops to intro.
+
