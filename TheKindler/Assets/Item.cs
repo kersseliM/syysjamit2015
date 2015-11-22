@@ -22,8 +22,7 @@ public class Item : MonoBehaviour
     {
         if(OnkoNPC == true)
         {
-            transform.root.GetComponent<NPCPALOJUTUT>().setBurnAnimation();
-            print("iSnpc");
+           GetComponent<NPCPALOJUTUT>().setBurnAnimation();
         }
 
     }
