@@ -12,8 +12,9 @@ GameObject:
   - 23: {fileID: 2340192}
   - 95: {fileID: 9515814}
   - 114: {fileID: 11490008}
-  - 64: {fileID: 6444688}
   - 54: {fileID: 5442126}
+  - 65: {fileID: 6538864}
+  - 65: {fileID: 6528530}
   m_Layer: 8
   m_Name: Makuu_aslusta
   m_TagString: Item
@@ -27,9 +28,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171456}
-  m_LocalRotation: {x: -.681708574, y: .187812254, z: .187812299, w: .681708574}
-  m_LocalPosition: {x: -4.2579999, y: -7.44000006, z: -6.48899984}
-  m_LocalScale: {x: 1.09213233, y: 1.80528879, z: 1.80528879}
+  m_LocalRotation: {x: -.662684262, y: .192911148, z: .182571068, w: .700216174}
+  m_LocalPosition: {x: 1.96599996, y: -7.71799994, z: -10.5430002}
+  m_LocalScale: {x: 1.34754074, y: 3.6304276, z: .322202951}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +64,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171456}
-  m_Mesh: {fileID: 4300000, guid: d7fd386caed027c489d5c215b33d69e0, type: 3}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &5442126
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -71,16 +72,28 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171456}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .5
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6444688
-MeshCollider:
+--- !u!65 &6528530
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .99999994, y: 1.00000012, z: 1.00000012}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6538864
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -89,8 +102,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300000, guid: d7fd386caed027c489d5c215b33d69e0, type: 3}
+  m_Size: {x: .99999994, y: .134549364, z: 1.00000012}
+  m_Center: {x: 1.59208157e-05, y: -.0168336295, z: -5.71203054e-05}
 --- !u!95 &9515814
 Animator:
   serializedVersion: 3
