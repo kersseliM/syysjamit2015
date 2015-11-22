@@ -123,3 +123,13 @@ NEW IDEAS (not yet accepted)
 (- Player health indicated by red pulsing edges of vision, round-ish gradient, and heartbeat sounds)
 - Player warmth indicated by encroaching darkness HUD effect, colors fading to black and white, and shivering/tremoring breath sounds
 
+
+
+
+
+
+
+Joku
+
+Idle 0-280,
+burn in hell 320-337

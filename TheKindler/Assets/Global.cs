@@ -48,6 +48,11 @@ public class Global : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.K))
             Application.Quit();
+
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+
+        }
        
         //    return;
 
@@ -161,6 +166,7 @@ public class Global : MonoBehaviour
         item.GetComponent<Item>().StartLerp();
         item.gameObject.layer = burningMask;
         g.transform.parent = item.transform;
+        item.GetComponent<Item>().CheckIfIsNpc();
         item.GetComponent<Item>().IsBurning = true;
         item.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }

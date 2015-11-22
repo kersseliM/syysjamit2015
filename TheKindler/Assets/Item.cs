@@ -11,6 +11,7 @@ public class Item : MonoBehaviour
     Vector3 startScale;
     Renderer myMat;
 
+   
     public bool OnkoNPC;
 
 

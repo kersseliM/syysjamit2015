@@ -90,7 +90,6 @@ GameObject:
   - 54: {fileID: 5498982}
   - 135: {fileID: 13539626}
   - 114: {fileID: 11402396}
-  - 114: {fileID: 11488114}
   - 135: {fileID: 13596954}
   m_Layer: 8
   m_Name: Calf
@@ -129,6 +128,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 459616}
   - 95: {fileID: 9545766}
+  - 82: {fileID: 8203030}
+  - 114: {fileID: 11421134}
   m_Layer: 0
   m_Name: NPC_Rigged
   m_TagString: Untagged
@@ -202,8 +203,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189368}
-  m_LocalRotation: {x: 0, y: .279459, z: 0, w: .960157633}
-  m_LocalPosition: {x: -7.53999996, y: -7.82999992, z: -4.51000023}
+  m_LocalRotation: {x: .000282883644, y: .279459, z: -8.23346199e-05, w: .960157633}
+  m_LocalPosition: {x: -.689999998, y: -7.67999983, z: -8.85999966}
   m_LocalScale: {x: 1.4476409, y: 1.44764102, z: 1.44764102}
   m_Children:
   - {fileID: 481208}
@@ -350,6 +351,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!82 &8203030
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189368}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: add1da08eb369af4cbdf23b5fddb29a1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9545766
 Animator:
   serializedVersion: 3
@@ -362,7 +433,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: cf39f8d2fbf636749abf86ba5be26a51, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -381,6 +452,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 50
   IsBurning: 0
+  OnkoNPC: 1
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -399,6 +471,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 50
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -417,6 +490,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 50
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -435,6 +509,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 50
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -453,10 +528,22 @@ MonoBehaviour:
   burnValue: 5
   duration: 50
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &11421134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5880bfb4a0ecfd842825889a285ac2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11433880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -471,6 +558,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 60
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -489,6 +577,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 50
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -507,6 +596,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 60
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -525,6 +615,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 60
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -543,24 +634,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 60
   IsBurning: 0
-  OnkoKaverit: 0
-  burningMask:
-    serializedVersion: 2
-    m_Bits: 0
---- !u!114 &11488114
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32dfe33d6727444994f77e0aa5ca842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  burnValue: 5
-  duration: 60
-  IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -579,6 +653,7 @@ MonoBehaviour:
   burnValue: 5
   duration: 60
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2
@@ -738,7 +813,7 @@ SkinnedMeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: e51b3a7894cbede42828fdcd273fbedb, type: 2}
-  - {fileID: 2100000, guid: e51b3a7894cbede42828fdcd273fbedb, type: 2}
+  - {fileID: 2100000, guid: 50cd2e4fe14021648892c0f02abd82f5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -779,7 +854,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.618175626, y: -1.61351636e-06, z: 1.08658064e-07}
+  m_ConnectedAnchor: {x: -.618175447, y: -1.47335231e-06, z: 6.74843363e-08}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -821,7 +896,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.270575911, y: 2.28174045e-07, z: 2.0001724e-07}
+  m_ConnectedAnchor: {x: -.270576149, y: 1.95577726e-07, z: -1.08785009e-07}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -863,7 +938,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.268077523, y: -5.97572765e-08, z: -2.33062053e-07}
+  m_ConnectedAnchor: {x: -.268077523, y: -1.11911291e-07, z: 1.39798502e-08}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -905,7 +980,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.235252738, y: 7.39004463e-07, z: -7.60070407e-09}
+  m_ConnectedAnchor: {x: -.235252619, y: 8.73114914e-07, z: -7.60071117e-09}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -947,7 +1022,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.578131616, y: 1.0933727e-06, z: 1.60059699e-09}
+  m_ConnectedAnchor: {x: -.578131616, y: 1.17532909e-06, z: -1.42507176e-07}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:

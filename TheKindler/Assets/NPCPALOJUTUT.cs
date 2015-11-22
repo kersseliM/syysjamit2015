@@ -5,6 +5,7 @@ public class NPCPALOJUTUT : MonoBehaviour
 {
     Animator anim;
     AudioSource a;
+    bool once;
     // Use this for initialization
     void Start()
     {
@@ -14,6 +15,9 @@ public class NPCPALOJUTUT : MonoBehaviour
 
     public void setBurnAnimation()
     {
+        if (once == true)
+            return;
+        once = true;
         anim.SetTrigger("Burn");
         Invoke("d", 7);
         a.Play();
