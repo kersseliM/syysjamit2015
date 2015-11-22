@@ -38,7 +38,10 @@ public class Global : MonoBehaviour
     void Update()
     {
 
-      //  if (voititPelin == true)
+
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.K))
+            Application.Quit();
+       
         //    return;
 
         timer += Time.deltaTime;
@@ -82,7 +85,7 @@ public class Global : MonoBehaviour
            targetPitch = 1.6f;
         }
 
-        if (temperature > 1 && temperature < 32)
+        if (temperature > 1 && temperature < 17)
             musicBox.pitch = 1;
 
         if(temperature <= 0)
@@ -92,6 +95,8 @@ public class Global : MonoBehaviour
 
         musicBox.pitch = Mathf.Lerp(musicBox.pitch, targetPitch, Time.deltaTime * 4);
 
+        if (voititPelin == true)
+            temperature = 20;
 
         if(temperature <=0)
         {
@@ -155,8 +160,12 @@ public class Global : MonoBehaviour
 
  public void VoititPelin()
   {
-
-      voititPelin = true;
-      print("Win");
+      if (voititPelin == false)
+      {
+          voititPelin = true;
+          print("Win");
+          MainCamAnimator.enabled = true;
+          MainCamAnimator.SetTrigger("Win");
+      }
   }
 }
