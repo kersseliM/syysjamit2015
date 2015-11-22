@@ -11,6 +11,22 @@ public class Item : MonoBehaviour
     Vector3 startScale;
     Renderer myMat;
 
+    public bool OnkoNPC;
+
+
+
+
+
+    public void CheckIfIsNpc()
+    {
+        if(OnkoNPC == true)
+        {
+            transform.root.GetComponent<NPCPALOJUTUT>().setBurnAnimation();
+            print("iSnpc");
+        }
+
+    }
+
     public bool OnkoKaverit;
     public void checkIfKaverit()
     {
