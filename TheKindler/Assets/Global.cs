@@ -43,16 +43,15 @@ public class Global : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.K))
             Application.Quit();
 
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Kuolema();
+        }
         if (voititPelin == true)
             return;
 
 
       
-
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-            Kuolema();
-        }
        
         //    return;
 
