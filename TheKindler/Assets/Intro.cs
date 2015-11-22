@@ -8,6 +8,8 @@ public class Intro : MonoBehaviour
     public Camera mainCam;
     Animator anim;
    public GameObject musicBox;
+ public  AudioListener ad;
+ public  AudioListener mainAd;
     // Use this for initialization
     void Start()
     {
@@ -15,8 +17,19 @@ public class Intro : MonoBehaviour
         introGamm = GetComponent<Camera>();
        // Global.Instanse.Mover.enabled = false;
         Invoke("a0", 5);
+        ad.enabled = true;
+        mainAd.enabled = false;
        
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            a0();
+            a1();
+        }
+        }
 
     void a0()
     {
@@ -31,17 +44,17 @@ public class Intro : MonoBehaviour
         audioSource.Stop();
         anim.enabled = true;
         musicBox.SetActive(true);
+     //   gameObject.SetActive(false);
+        ad.enabled = false;
+        mainAd.enabled = true;
     }
 
     public void SwitchCameras()
     {
         introGamm.enabled = false;
         mainCam.enabled = true;
-      
+        anim.enabled = false;
     }
     // Update is called once per frame
-    void Update()
-    {
 
-    }
 }

@@ -17,14 +17,14 @@ public class Global : MonoBehaviour
     public RigidbodyFirstPersonController Mover;
     public AudioSource musicBox;
     public float MassOfThItem = 1;
-    public float TimeToFreezeDeaht=60;
+     float TimeToFreezeDeaht=100;
 
    public bool FIREISOUT;
     public AudioSource hyperventio;
     public float TimeToWin =  5000;
     float timer;
     bool voititPelin;
-
+    public Animator MainCamAnimator;
     void Awake()
     {
         Instanse = this;
@@ -76,30 +76,23 @@ public class Global : MonoBehaviour
 
         slider.value = Mathf.Lerp(slider.value, temperature, Time.deltaTime * 5);
 
-
         float targetPitch = 1;
 
-
-
-        if (temperature >= 39)
-        {
-           targetPitch = 2.5f;
-        }
-
-        if (temperature > 1 && temperature < 25)
-            musicBox.pitch = 1;
-
-        if (temperature >= 25)
+ 
+        if (temperature >= 33)
         {
            targetPitch = 1.6f;
         }
 
+        if (temperature > 1 && temperature < 32)
+            musicBox.pitch = 1;
+
         if(temperature <= 0)
         {
-           targetPitch = 0.3f;
+           targetPitch = 0.7f;
         }
 
-        musicBox.pitch = Mathf.Lerp(musicBox.pitch, targetPitch, Time.deltaTime * 5);
+        musicBox.pitch = Mathf.Lerp(musicBox.pitch, targetPitch, Time.deltaTime * 4);
 
 
         if(temperature <=0)
@@ -111,7 +104,7 @@ public class Global : MonoBehaviour
 
             if(TimeToFreezeDeaht <= 0) 
             {
-                Application.LoadLevel(Application.loadedLevel);
+                Kuolema();
             }
         }
         else
@@ -125,6 +118,13 @@ public class Global : MonoBehaviour
         }
 
     }
+
+    private void Kuolema()
+    {
+        MainCamAnimator.enabled = true;
+    }
+
+
 
     void FIREISOUTAAA()
     {

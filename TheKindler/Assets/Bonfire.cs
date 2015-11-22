@@ -15,11 +15,6 @@ public class Bonfire : MonoBehaviour {
 	void Update () 
     {
 	
-
-
-        
-
-
         
 	}
 
