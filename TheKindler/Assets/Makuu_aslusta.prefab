@@ -13,8 +13,8 @@ GameObject:
   - 95: {fileID: 9515814}
   - 114: {fileID: 11490008}
   - 54: {fileID: 5442126}
-  - 65: {fileID: 6538864}
-  - 65: {fileID: 6528530}
+  - 64: {fileID: 6489594}
+  - 65: {fileID: 6542696}
   m_Layer: 8
   m_Name: Makuu_aslusta
   m_TagString: Item
@@ -29,8 +29,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171456}
   m_LocalRotation: {x: -.662684262, y: .192911148, z: .182571068, w: .700216174}
-  m_LocalPosition: {x: 1.96599996, y: -7.71799994, z: -10.5430002}
-  m_LocalScale: {x: 1.34754074, y: 3.6304276, z: .322202951}
+  m_LocalPosition: {x: -7.4369998, y: -6.36499977, z: -4.24800014}
+  m_LocalScale: {x: 1, y: 1.39708233, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,7 +64,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171456}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 3e6f4e4e2a21c14459c8c9a78b50e0df, type: 3}
 --- !u!54 &5442126
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -80,7 +80,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6528530
+--- !u!64 &6489594
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 3e6f4e4e2a21c14459c8c9a78b50e0df, type: 3}
+--- !u!65 &6542696
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -90,20 +102,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .99999994, y: 1.00000012, z: 1.00000012}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &6538864
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 171456}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .99999994, y: .134549364, z: 1.00000012}
-  m_Center: {x: 1.59208157e-05, y: -.0168336295, z: -5.71203054e-05}
+  m_Size: {x: 1.49648356, y: 1.40000021, z: .463705957}
+  m_Center: {x: -.0482339412, y: 6.32755427e-06, z: -.0420888849}
 --- !u!95 &9515814
 Animator:
   serializedVersion: 3
@@ -133,8 +133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burnValue: 10
-  duration: 10
+  duration: 12
   IsBurning: 0
+  OnkoNPC: 0
   OnkoKaverit: 0
   burningMask:
     serializedVersion: 2

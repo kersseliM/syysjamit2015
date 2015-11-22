@@ -40,18 +40,18 @@ public class Global : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.K))
+            Application.Quit();
 
         if (voititPelin == true)
             return;
 
 
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.K))
-            Application.Quit();
+      
 
         if(Input.GetKeyDown(KeyCode.L))
         {
-
+            Kuolema();
         }
        
         //    return;
