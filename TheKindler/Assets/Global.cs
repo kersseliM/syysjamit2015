@@ -21,8 +21,8 @@ public class Global : MonoBehaviour
 
    public bool FIREISOUT;
     public AudioSource hyperventio;
-    public float TimeToWin =  5000;
-    float timer;
+ public   float TimeToWin =  60;
+  public  float timer;
     bool voititPelin;
     public Animator MainCamAnimator;
     void Awake()
@@ -38,18 +38,16 @@ public class Global : MonoBehaviour
     void Update()
     {
 
-        if (voititPelin == true)
-            return;
+      //  if (voititPelin == true)
+        //    return;
 
         timer += Time.deltaTime;
 
 
-        if(timer > TimeToWin)
-        {
-            print("VoititPelin");
-            voititPelin = true;
-
-        }
+       // if(timer > TimeToWin)
+        //{
+           
+        //}
    //     Mover.movementSettings.CurrentTargetSpeed *= MassOfThItem;//
     //    Mover.movementSettings.CurrentTargetSpeed = 20;
 
@@ -154,4 +152,11 @@ public class Global : MonoBehaviour
         item.GetComponent<Item>().IsBurning = true;
         item.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
+
+ public void VoititPelin()
+  {
+
+      voititPelin = true;
+      print("Win");
+  }
 }
