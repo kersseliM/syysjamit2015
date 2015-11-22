@@ -8,6 +8,8 @@ public class Global : MonoBehaviour
 {
   public  GameObject Fire;
 
+
+  public Canvas MeterCanvas;
   public LayerMask burningMask;
     public static Global Instanse;
     public List<ParticleSystemMultiplier> fires = new List<ParticleSystemMultiplier>();
@@ -24,6 +26,7 @@ public class Global : MonoBehaviour
  public   float TimeToWin =  60;
   public  float timer;
     bool voititPelin;
+    public Text Win;
     public Animator MainCamAnimator;
     void Awake()
     {
@@ -37,6 +40,10 @@ public class Global : MonoBehaviour
 
     void Update()
     {
+
+
+        if (voititPelin == true)
+            return;
 
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.K))
@@ -166,6 +173,8 @@ public class Global : MonoBehaviour
           print("Win");
           MainCamAnimator.enabled = true;
           MainCamAnimator.SetTrigger("Win");
+          Win.enabled = true;
+          MeterCanvas.enabled = false;
       }
   }
 }
